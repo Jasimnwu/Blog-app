@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Dodger_blue"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/loginwcl"
+        android:layout_width="141dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/welcome"
+        android:contentDescription="@string/wlc"/>
+
+    <ImageView
+        android:id="@+id/loginphoto"
+        android:layout_width="257dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/loginwcl"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/photo_blog"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@string/phot"/>
+
+    <EditText
+        android:id="@+id/loginemail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/loginphoto"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="textEmailAddress"
+        android:textSize="16dp"
+        android:hint="enter email"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/loginpass"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/loginemail"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="numberPassword"
+        android:textSize="16dp"
+        android:hint="enter password"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:textColorHint="@color/white" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/login"
+        android:layout_below="@id/loginpass"
+        android:textAllCaps="false"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/pomegranate"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        />
+
+    <Button
+        android:id="@+id/crateaccoutn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/cacnt"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10sp"
+        android:textSize="14sp"
+        android:textColor="@color/pomegranate"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"/>
+</RelativeLayout>
