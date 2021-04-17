@@ -16,18 +16,20 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mauth;
     private Toolbar toolbar;
+    private FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        mauth = FirebaseAuth.getInstance();
-        toolbar = findViewById(R.id.hometoolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("photo Blog");
-
+        mauth = FirebaseAuth.getInstance();
+        toolbar = findViewById(R.id.hometoolbar);
+        fab = findViewById(R.id.fab);
+        fab.setOnClickListener(this);
     }
     @Override
     protected void onStart() {
@@ -70,4 +72,12 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onClick(View v) {
+        if ( v.getId() == R.id.fab ) {
+            Intent sintent = new Intent(HomeActivity.this,PostActivity.class);
+            startActivity(sintent);
+            finish();
+        }
+    }
 }
